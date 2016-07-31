@@ -11,7 +11,14 @@ proc chain {args} {
 
 puts [chain [list add] [list add]]
 
-# above is a simplified version of the idea.
+#or
+
+puts [chain [list add] \
+            [list add] \
+     ]
+
+
+# above is a simplified version of the idea:
 # here are my notes
 #   proc chain args
 #     split on new line or args or something
@@ -29,4 +36,15 @@ puts [chain [list add] [list add]]
 #         loop
 #           create string of code
 #         repeat
-#         return [lastarg [lastarg-1 [lastarg-2 possible other variables ... [firstarg Starting variables ] other variables ] other variables ]]    
+#         return [lastarg [lastarg-1 [lastarg-2 possible other variables ... [firstarg Starting variables ] other variables ] other variables ]]
+
+
+#this would be the ideal way to call it: or above is ok I guess.
+# set variable chain {
+#                       Variable to start with goes on this first line
+#                       list add
+#                       list add
+#                       etc.
+#                       string replace [] 1 2
+#                       string uppercase [] <----that [] is the argument thats getting piped or something.
+#                     }
