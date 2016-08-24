@@ -30,15 +30,15 @@ puts [::chain::chain "  THIS IS THE SEED, THE OTHER ARGUMENTS MUTATE THE STRING 
        #proc return1 {} {
        #  return Buddy
        #}
-       #puts [chain "hello world"     \
-       [list string toupper {} ] \
-       [list inspect {}]          \
-       [list string tolower {}] \
-       [list inspect {}]         \
-       [list returnlist {}] \
-       [list inspect {}]         \
-       [list needstwo {} [return1]] \
-       [list inspect {}]         ]
+       #puts [::chain::chain   "hello world"               \
+                             [list string toupper {}    ] \
+                             [list inspect {}           ] \
+                             [list string tolower {}    ] \
+                             [list inspect {}           ] \
+                             [list returnlist {}        ] \
+                             [list inspect {}           ] \
+                             [list needstwo {} [return1]] \
+                             [list inspect {}]          ]
 
 
 
