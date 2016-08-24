@@ -10,8 +10,38 @@
 
 source ./chain.tcl
 
-puts [chain "  THIS IS THE SEED, THE OTHER ARGUMENTS MUTATE THE STRING ONE AT A TIME.  " \
-            [list string trim {}] \
-            [list string tolower {}] \
+puts [::chain::chain "  THIS IS THE SEED, THE OTHER ARGUMENTS MUTATE THE STRING ONE AT A TIME.  " \
+            [list string trim {}]       \
+            [list ::chain::inspect {}]  \
+            [list string tolower {}]    \
+            [list inspect {}]           \
             [list string map -nocase {"THE OTHER ARGUMENTS MUTATE THE STRING ONE AT A TIME" "the other arguments can have more than one argument \nand you can specify which one to pass the seed to by indicating an empty \nargument ( {} )"} {}] \
      ]
+
+
+
+       #proc needstwo {a b} {
+       #  return "worked! $a $b"
+       #}
+       #proc returnlist {args} {
+       #  return [list [lindex $args 0] "abc"]
+       #}
+
+       #proc return1 {} {
+       #  return Buddy
+       #}
+       #puts [chain "hello world"     \
+       [list string toupper {} ] \
+       [list inspect {}]          \
+       [list string tolower {}] \
+       [list inspect {}]         \
+       [list returnlist {}] \
+       [list inspect {}]         \
+       [list needstwo {} [return1]] \
+       [list inspect {}]         ]
+
+
+
+     # next steps:
+     # we'd really like to make it able to pass multiple parameters
+     # maybe by using lassign or {*} with special caharacters like {***}, etc.
