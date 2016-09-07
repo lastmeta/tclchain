@@ -10,12 +10,12 @@
 
 source ./chain.tcl
 
-puts [::chain::chain "  THIS IS THE SEED, THE OTHER ARGUMENTS MUTATE THE STRING ONE AT A TIME.  " \
-            [list string trim {}]       \
-            [list ::chain::inspect {}]  \
-            [list string tolower {}]    \
-            [list inspect {}]           \
-            [list string map -nocase {"THE OTHER ARGUMENTS MUTATE THE STRING ONE AT A TIME" "the other arguments can have more than one argument \nand you can specify which one to pass the seed to by indicating an empty \nargument ( {} )"} {}] \
+puts [::chain::this "  THIS IS THE SEED, THE OTHER ARGUMENTS MUTATE THE STRING ONE AT A TIME.  " \
+              [list string trim {}]       \
+              [list ::chain::inspect {}]  \
+              [list string tolower {}]    \
+              [list inspect {}]           \
+              [list string map -nocase {"THE OTHER ARGUMENTS MUTATE THE STRING ONE AT A TIME" "the other arguments can have more than one argument \nand you can specify which one to pass the seed to by indicating an empty \nargument ( {} )"} {}] \
      ]
 
 

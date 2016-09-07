@@ -1,6 +1,6 @@
 namespace eval ::chain {
 
-  proc chain {seed args} {
+  proc this {seed args} {
     foreach arg $args {
       set index [lsearch -all $arg {}]
       foreach in $index {
